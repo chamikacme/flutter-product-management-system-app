@@ -15,7 +15,7 @@ class DashboardPage extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('Dashboard ${state.token}'),
+            title: const Text('Dashboard'),
           ),
           backgroundColor: const Color.fromARGB(255, 228, 228, 228),
           body: SafeArea(
