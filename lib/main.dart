@@ -3,8 +3,15 @@ import 'pages/login_page.dart';
 import 'pages/register_page.dart';
 import 'pages/dashboard.dart';
 
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:newapp/bloc/auth_bloc/auth_bloc.dart';
+
 void main() {
-  runApp(const MyApp());
+  final BlocProvider<AuthBloc> authBlocProvider = BlocProvider<AuthBloc>(
+    create: (context) => AuthBloc(),
+    child: const MyApp(),
+  );
+  runApp(authBlocProvider);
 }
 
 class MyApp extends StatelessWidget {
