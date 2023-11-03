@@ -113,6 +113,17 @@ class DashboardPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(
+                        color: Colors.blue, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(height: 25),
               ],
             ),
           ),

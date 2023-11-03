@@ -98,6 +98,18 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 25),
+
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/dashboard');
+                  },
+                  child: const Text(
+                    'Dashboard',
+                    style: TextStyle(
+                        color: Colors.blue, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(height: 25),
               ],
             ),
           ),
